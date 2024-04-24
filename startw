@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# dwl -s 'swaybg -m fill -i ~/Pictures/wallpapers/big-mountain.png & /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 & pipewire & pipewire-pulse & wireplumber; yambar' > ~/.cache/dwl-info
+dwl > ~/.cache/dwl-info
+

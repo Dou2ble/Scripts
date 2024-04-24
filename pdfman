@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# man=$(apropos . | dmenu -p 'Manpage' | awk -F '[()]' '{print $2, $1}')
+# printf '%s' "$man" | xargs -r man -Tpdf | zathura -
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <man page>"
+    exit 1
+fi
+
+# Concatenate all arguments into a single string
+args=""
+for arg in "$@"; do
+    args+="$arg "
+done
+
+man -Tpdf $args | devour zathura -
